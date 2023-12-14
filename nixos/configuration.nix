@@ -5,7 +5,7 @@
     ./audio.nix
     ./gnome.nix
     ./hyprland.nix
-    ./laptop.nix
+#    ./laptop.nix
     ./locale.nix
   ];
 
@@ -61,7 +61,7 @@
   };
 
   # user
-  users.users.${username} = {
+  users.users.judge = {
     isNormalUser = true;
     extraGroups = [
       "networkmanager"
