@@ -240,7 +240,6 @@
     aspellDicts.de
     aspellDicts.en
     ffmpegthumbnailer
-    floorp
     freerdp
     element-desktop-wayland
     element-desktop
