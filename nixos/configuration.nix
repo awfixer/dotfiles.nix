@@ -36,7 +36,7 @@
     git
     wget
     kitty
-    alacrity
+    alacritty
     flatpak
   ];
 
