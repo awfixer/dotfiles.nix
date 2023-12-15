@@ -19,17 +19,20 @@
     polkit.enable = true;
   };
 
-  environment.systemPackages = with pkgs.gnome; [
-    adwaita-icon-theme
-    nautilus
-    baobab
-    gnome-calendar
-    gnome-boxes
-    gnome-system-monitor
-    gnome-control-center
-    gnome-weather
-    gnome-calculator
-    gnome-software # for flatpak
+environment.systemPackages = with pkgs; [
+    kitty
+    fish
+    foot
+    fuzzel
+    gnome.nautilus
+    gnome.baobab
+    gnome.gnome-calendar
+    gnome.gnome-boxes
+    gnome.gnome-system-monitor
+    gnome.gnome-control-center
+    gnome.gnome-weather
+    gnome.gnome-calculator
+    gnome.gnome-software # for flatpak
   ];
 
   systemd = {
