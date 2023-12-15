@@ -35,6 +35,9 @@
     neovim
     git
     wget
+    kitty
+    alacrity
+    flatpak
   ];
 
   # services
