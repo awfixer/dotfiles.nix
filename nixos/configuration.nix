@@ -159,14 +159,14 @@
 
   # network
   networking = {
-    hostName = "nixos";
+    hostName = "judgemental";
     networkmanager.enable = true;
   };
 
   # bluetooth
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = false;
+    powerOnBoot = true;
     settings.General.Experimental = true; # for gnome-bluetooth percentage
   };
 
