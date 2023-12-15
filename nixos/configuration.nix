@@ -37,6 +37,9 @@
     wget
     kitty
     alacritty
+    sassc
+    swww
+    brightnessctl
     flatpak
   ];
 
