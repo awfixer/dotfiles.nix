@@ -26,7 +26,6 @@ environment.systemPackages = with pkgs; [
     waypaper
     vim
     foot
-    floorp
     wezterm
     slurp
     wl-clipboard
