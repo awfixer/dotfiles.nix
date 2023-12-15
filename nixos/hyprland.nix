@@ -23,6 +23,16 @@ environment.systemPackages = with pkgs; [
     kitty
     fish
     foot
+    floorp
+    wezterm
+    slurp
+    wl-clipboard
+    brightnessctl
+    gjs
+    gobject-introspection
+    unzip
+    grim
+    emacs
     fuzzel
     github-desktop
     gnome.adwaita-icon-theme
