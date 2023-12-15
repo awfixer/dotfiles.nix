@@ -20,36 +20,42 @@
   };
 
 environment.systemPackages = with pkgs; [
-    kitty
-    fish
-    swaybg
-    waypaper
-    vim
-    foot
-    wezterm
-    slurp
-    wl-clipboard
-    brightnessctl
-    gjs
-    gobject-introspection
-    unzip
-    grim
-    emacs
-    fuzzel
-    github-desktop
-    git-lfs
-    libsForQt5.kate
-    libsForQt5.kdeconnect-kde
-    gnome.adwaita-icon-theme
-    gnome.nautilus
-    gnome.baobab
-    gnome.gnome-calendar
-    gnome.gnome-boxes
-    gnome.gnome-system-monitor
-    gnome.gnome-control-center
-    gnome.gnome-weather
-    gnome.gnome-calculator
-    gnome.gnome-software # for flatpak
+   kitty                                  # to get started with hyprland hit super+Q
+   fish                                   # for you standard user
+   neofetch                               #
+   firefox                                #
+   lolcat                                 #
+   zellij                                 #
+   tmux                                   # when your kinda based
+   swaybg                                 #
+   waypaper                               #
+   vim                                    # I use vim btw
+   foot                                   #
+   zsh                                    # for your average poweruser
+   oil                                    # for based af people :dead:
+   slurp                                  # the screenshop to your clipboard
+   wl-clipboard                           #
+   brightnessctl                          #
+   gjs                                    #
+   gobject-introspection                  #
+   unzip                                  #
+   grim                                   #
+   emacs                                  # doomemacs coming soon (insert tm here)
+   fuzzel                                 #
+   github-desktop                         #
+   git-lfs                                #
+   libsForQt5.kate                        #
+   libsForQt5.kdeconnect-kde              #
+   gnome.adwaita-icon-theme               #
+   gnome.nautilus                         #
+   gnome.baobab                           #
+   gnome.gnome-calendar                   #
+   gnome.gnome-boxes                      # me too yeah
+   gnome.gnome-system-monitor             #
+   gnome.gnome-control-center             #
+   gnome.gnome-weather                    #
+   gnome.gnome-calculator                 # numbers go here btw
+   gnome.gnome-software                   # for flatpak
   ];
 
   systemd = {
