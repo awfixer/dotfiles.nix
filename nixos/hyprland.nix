@@ -23,6 +23,10 @@
     adwaita-icon-theme
     nautilus
     baobab
+    kitty
+    floorp
+    foot
+    fish
     gnome-calendar
     gnome-boxes
     gnome-system-monitor
