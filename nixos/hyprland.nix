@@ -24,6 +24,7 @@ environment.systemPackages = with pkgs; [
     fish
     foot
     fuzzel
+    github-desktop
     gnome.adwaita-icon-theme
     gnome.nautilus
     gnome.baobab
