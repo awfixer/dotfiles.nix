@@ -22,6 +22,9 @@
 environment.systemPackages = with pkgs; [
     kitty
     fish
+    swaybg
+    waypaper
+    vim
     foot
     floorp
     wezterm
@@ -35,6 +38,9 @@ environment.systemPackages = with pkgs; [
     emacs
     fuzzel
     github-desktop
+    git-lfs
+    libsForQt5.kate
+    libsForQt5.kdeconnect-kde
     gnome.adwaita-icon-theme
     gnome.nautilus
     gnome.baobab
