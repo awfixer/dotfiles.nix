@@ -5,7 +5,7 @@
     ./audio.nix
     ./gnome.nix
     ./hyprland.nix
-    ./chaotic.nix
+#   ./chaotic.nix
     ./locale.nix
   ];
 
