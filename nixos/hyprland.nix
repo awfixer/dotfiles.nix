@@ -25,6 +25,17 @@ environment.systemPackages = with pkgs; [
    neofetch                               #
    firefox                                #
    lolcat                                 #
+   gh
+   gitui
+   gitty
+   ventoy-bin
+   gitea
+   git-up
+   gittyup
+   ghr
+   gitg
+   git-doc
+   ghq
    zellij                                 #
    tmux                                   # when your kinda based
    swaybg                                 #
