@@ -22,18 +22,19 @@
 environment.systemPackages = with pkgs; [
    kitty                                  # to get started with hyprland hit super+Q
    fish                                   # for you standard user
-   cargo
-   rustup
-   nodejs_21
-   node2nix
-   gcc
-   clang
-   ccls
-   zig
-   cccc
-   cc65
-   cl
-   freetube
+   cargo                                  #
+   rustup                                 #
+   nodejs_21                              #
+   nerdfonts                              #
+   node2nix                               #
+   gcc                                    #
+   clang                                  #
+   ccls                                   #
+   zig                                    #
+   cccc                                   #
+   cc65                                   #
+   cl                                     #
+   freetube                               #
    neofetch                               #
    firefox                                #
    lolcat                                 #
