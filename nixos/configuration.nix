@@ -52,6 +52,7 @@
     chatterino2
     brightnessctl
     flatpak
+    nerdfonts
     age
     bind
     neovim
