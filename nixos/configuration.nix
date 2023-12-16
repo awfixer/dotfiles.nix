@@ -31,6 +31,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
+    linuxKernel.kernels.linux_lqx
     home-manager
     neovim
     git
@@ -517,6 +518,7 @@
   };
 
   # bootloader
+  boot.kernelPackages = pkgs.linuxPackages_
   boot = {
     tmp.cleanOnBoot = true;
     supportedFilesystems = [ "ntfs" ];
