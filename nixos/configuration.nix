@@ -33,6 +33,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
     neovim
+    vim
     git
     wget
   ];
@@ -109,5 +110,5 @@
     };
   };
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "24.05";
 }
