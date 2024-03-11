@@ -1,12 +1,12 @@
-{ pkgs, username, ... }: {
+{ pkgs, username, hostname, ... }: {
 
   imports = [
     /etc/nixos/hardware-configuration.nix
     ./audio.nix
+    ./locale.nix
     # ./gnome.nix
     ./hyprland.nix
-    ./laptop.nix
-    ./locale.nix
+    # ./laptop.nix
   ];
 
   # nix
@@ -77,7 +77,7 @@
 
   # network
   networking = {
-    hostName = "nixos";
+    hostName = hostname;
     networkmanager.enable = true;
   };
 
@@ -101,7 +101,7 @@
       enable = true;
       # black_hud circle_hud cross_hud square_hud
       # circuit connect cuts_alt seal_2 seal_3
-      theme = "circle_hud";
+      theme = "connect";
       themePackages = with pkgs; [(
         adi1090x-plymouth-themes.override {
           selected_themes = [ theme ];

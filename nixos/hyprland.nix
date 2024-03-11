@@ -1,26 +1,5 @@
-{ inputs, pkgs, config, ... }:
-let
-  ags = inputs.ags.packages.${pkgs.system}.ags;
-  conf = pkgs.writeText "config" ''
-    exec-once = swww init
-    exec-once = swww img ${../ags/assets/leaves.jpg}
-    exec-once = ags -c ${./greeter/greeter.js}; hyprctl dispatch exit
-    misc {
-      disable_hyprland_logo = true
-      disable_splash_rendering = true
-      force_default_wallpaper = 0
-    }
-    input {
-      kb_layout = ${config.services.xserver.layout}
-    }
-  '';
-in
-{
+{ pkgs, inputs, config, username, asztal, ... }: {
   services.xserver.displayManager.startx.enable = true;
-  services.greetd = {
-    enable = true;
-    settings.default_session.command = "Hyprland --config ${conf}";
-  };
 
   programs.hyprland = {
     enable = true;
@@ -40,10 +19,9 @@ in
     pam.services.ags = {};
   };
 
-  environment.systemPackages = with pkgs.gnome; [
-    ags
-    pkgs.swww
-    pkgs.loupe
+  environment.systemPackages = with pkgs; with gnome; [
+    gnome.adwaita-icon-theme
+    loupe
     adwaita-icon-theme
     nautilus
     baobab
@@ -55,6 +33,12 @@ in
     gnome-calculator
     gnome-clocks
     gnome-software # for flatpak
+    wl-gammactl
+    wl-clipboard
+    wayshot
+    pavucontrol
+    brightnessctl
+    swww
   ];
 
   systemd = {
@@ -87,4 +71,31 @@ in
       gnome-online-accounts.enable = true;
     };
   };
+
+  services.greetd = {
+    enable = true;
+    settings.default_session.command = pkgs.writeShellScript "greeter" ''
+      export XKB_DEFAULT_LAYOUT=${config.services.xserver.xkb.layout}
+      export XCURSOR_THEME=Qogir
+      ${asztal}/bin/greeter
+    '';
+  };
+
+  systemd.tmpfiles.rules = [
+    "d '/var/cache/greeter' - greeter greeter - -"
+  ];
+
+  system.activationScripts.wallpaper = ''
+    PATH=$PATH:${pkgs.coreutils}/bin:${pkgs.gawk}/bin:${pkgs.jq}/bin
+    CACHE="/var/cache/greeter"
+    OPTS="$CACHE/options.json"
+
+    cp /home/${username}/.cache/ags/options.json $OPTS
+    chown greeter:greeter $OPTS
+
+    BG=$(cat $OPTS | jq -r '.wallpaper // "/home/${username}/.config/background"')
+
+    cp $BG $CACHE/background
+    chown greeter:greeter $CACHE/background
+  '';
 }
