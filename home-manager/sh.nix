@@ -13,15 +13,13 @@ let
   '';
   shellAliases = {
     "db" = "distrobox";
-    "arch" = "distrobox-enter Arch -- zsh";
-    "fedora" = "distrobox-enter Fedora -- zsh";
     "eza" = "eza -l --sort type --no-permissions --no-user --no-time --header --icons --no-filesize --group-directories-first";
     "tree" = "eza --tree";
     "ll" = "eza";
     "éé" = "eza";
     "és" = "eza";
     "l" = "eza";
-    "nvim" = "nv";
+    "nv" = "nvim";
     ":q" = "exit";
     "q" = "exit";
     "gs" = "git status";
@@ -44,7 +42,7 @@ in
       inherit shellAliases;
       enable = true;
       enableCompletion = true;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       initExtra = ''
         SHELL=${pkgs.zsh}/bin/zsh

@@ -19,10 +19,14 @@
     };
   };
 
+  # camera
+  programs.droidcam.enable = true;
+
   # virtualisation
   programs.virt-manager.enable = true;
   virtualisation = {
     podman.enable = true;
+    docker.enable = true;
     libvirtd.enable = true;
   };
 
@@ -72,6 +76,7 @@
       "audio"
       "video"
       "libvirtd"
+      "docker"
     ];
   };
 

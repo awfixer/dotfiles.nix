@@ -27,6 +27,7 @@
     dconf-editor
 
     # tools
+    steam-run # fhs envs
     bat
     eza
     fd
@@ -44,6 +45,5 @@
     yabridge
     yabridgectl
     wine-staging
-    distrobox
   ];
 }
